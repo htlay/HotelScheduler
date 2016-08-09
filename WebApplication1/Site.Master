@@ -1,0 +1,64 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="WebApplication1.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="~/Media/layout.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server"></asp:ContentPlaceHolder>
+
+</head>
+
+<body>
+    <form id="form1" runat="server">
+             
+    <div class="page">
+        <div id="header">
+			<div class="bg-help">
+				<div class="inBox">
+					<h1 id="logo"><a href='Users.aspx'>Ho</a>tel Managerment</h1>
+					<p id="claim">ASP.net, SQL</p>
+					<hr class="hidden" />
+				</div>
+			</div>
+        </div>
+        <div class="shadow"></div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+    </div>
+         <table style="font-family:Arial">
+    <tr>
+        <td colspan="2" style="width:800px; height:80px; background-color:#3399FF; 
+            text-align:center">
+            <h1>
+                Welcome</h1>
+        </td>
+    </tr>
+    <tr>
+        <td style="height:500px; background-color:#66FFFF; width:150px">
+            <h3>//Add sth here</h3>
+        </td>
+        <td style="height:500px; background-color:#9999FF; width:650px">
+             <h3>Hotel</h3>  
+                 <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+        </td>
+    </tr>
+</table>
+       <div class="container body-content">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+            </asp:ContentPlaceHolder>
+            <footer>
+                <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+            </footer>
+        </div>
+
+    </form>
+</body>
+</html>
+
