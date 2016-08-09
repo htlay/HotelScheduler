@@ -102,6 +102,9 @@
     <Content Include="App_Data\RegistrationData_log.ldf">
       <DependentUpon>RegistrationData.mdf</DependentUpon>
     </Content>
+    <Content Include="bin\AjaxControlToolkit.dll" />
+    <Content Include="bin\DayPilot.dll" />
+    <Content Include="Booking.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
@@ -139,6 +142,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Booking.aspx.cs">
+      <DependentUpon>Booking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Booking.aspx.designer.cs">
+      <DependentUpon>Booking.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
