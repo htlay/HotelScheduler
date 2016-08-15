@@ -21,7 +21,7 @@ namespace WebApplication1
                 string checkuser = "select count(*) from [UserData] where UserName='" + TextBoxUN.Text + "'";
                 SqlCommand com = new SqlCommand(checkuser, conn);
                 int count = Convert.ToInt32(com.ExecuteScalar().ToString());
-                if (count > 0)
+                if (count == 1)
                 {
                     Response.Write("User already exists");
                 }
@@ -62,5 +62,9 @@ namespace WebApplication1
             }
         }
 
+        protected void TextBoxPass_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

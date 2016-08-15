@@ -30,7 +30,11 @@
             <tr>
                 <td class="auto-style4">Password</td>
                 <td class="auto-style7">
-                    <asp:TextBox ID="TextBoxPass" runat="server" style="text-align: left" TextMode="Password" Width="180px"></asp:TextBox>
+                    <asp:ScriptManager ID="ScriptManager1" runat="server">
+                    </asp:ScriptManager>
+                    <asp:TextBox ID="TextBoxPass" runat="server" style="text-align: left" TextMode="Password" Width="180px" OnTextChanged="TextBoxPass_TextChanged"></asp:TextBox>
+
+                    <ajaxToolkit:PasswordStrength ID="TextBoxPass_PasswordStrength" runat="server" BehaviorID="TextBoxPass_PasswordStrength" MinimumLowerCaseCharacters="1" MinimumNumericCharacters="1" MinimumSymbolCharacters="1" MinimumUpperCaseCharacters="1" PreferredPasswordLength="8" TargetControlID="TextBoxPass" />
 
                 </td>
                 <td class="auto-style2">
