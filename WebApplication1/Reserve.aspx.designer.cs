@@ -31,6 +31,33 @@ namespace WebApplication1 {
         protected global::System.Web.UI.WebControls.Label LabelWelcome;
         
         /// <summary>
+        /// LinkButtonSample control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton LinkButtonSample;
+        
+        /// <summary>
+        /// DayPilotScheduler1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::DayPilot.Web.Ui.DayPilotScheduler DayPilotScheduler1;
+        
+        /// <summary>
+        /// LinkButton1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton LinkButton1;
+        
+        /// <summary>
         /// ButtonLogOut control.
         /// </summary>
         /// <remarks>

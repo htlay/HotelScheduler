@@ -40,7 +40,7 @@ namespace WebApplication1
                 {
                     Session["New"] = TextBoxUserN.Text;
                     Response.Write("Password is correct");
-                    Response.Redirect("Users.aspx");
+                    Response.Redirect("Reserve.aspx");
                 }
                 else
                 {

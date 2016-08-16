@@ -39,8 +39,10 @@ namespace WebApplication1
 
         protected void BSumit_Click(object sender, EventArgs e)
         {
+            string constr = ConfigurationManager.ConnectionStrings["RegistrationConnectionString"].ConnectionString;
             try
             {
+
                 SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["RegistrationConnectionString"].ConnectionString);
                 conn.Open();
                 string insertQuery = "insert into [UserData] (UserName,Email,Password,Country) values (@Uname ,@email, @password, @country)";
@@ -51,7 +53,7 @@ namespace WebApplication1
                 com.Parameters.AddWithValue("@country", SelectCountry.SelectedItem.ToString());
 
                 com.ExecuteNonQuery();
-                Response.Redirect("Manager.aspx");
+                Response.Redirect("Reserve.aspx");
                 Response.Write("Your registration is successful.");
 
                 conn.Close();
