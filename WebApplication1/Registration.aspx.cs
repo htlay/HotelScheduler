@@ -14,7 +14,7 @@ namespace WebApplication1
         protected void Page_Load(object sender, EventArgs e)
         {
             this.UnobtrusiveValidationMode = System.Web.UI.UnobtrusiveValidationMode.None;
-            if (IsPostBack)
+            if (!IsPostBack)
             {
                 SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["RegistrationConnectionString"].ConnectionString);
                 conn.Open();
@@ -24,6 +24,7 @@ namespace WebApplication1
                 if (count == 1)
                 {
                     Response.Write("User already exists");
+                    
                 }
 
                 conn.Close();

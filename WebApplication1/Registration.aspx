@@ -30,7 +30,7 @@
             <tr>
                 <td class="auto-style4">Password</td>
                 <td class="auto-style7">
-                    <asp:ScriptManager ID="ScriptManager1" runat="server">
+                    <asp:ScriptManager ID="ScriptManagerPassword" runat="server">
                     </asp:ScriptManager>
                     <asp:TextBox ID="TextBoxPass" runat="server" style="text-align: left" TextMode="Password" Width="180px" OnTextChanged="TextBoxPass_TextChanged"></asp:TextBox>
 
