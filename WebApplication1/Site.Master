@@ -19,21 +19,38 @@
 				<div class="inBox">
 					<h1 id="logo"><a href='Users.aspx'>Hotel Managerment</a></h1>
 					<p id="claim">ASP.net, SQL</p>
+
 					<hr class="hidden" />
 				</div>
 			</div>
         </div>
         <div class="shadow"></div>
         <div class="main">
-            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                <asp:Menu ID="Menu1" runat="server" BackColor="#FFFBD6" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="1em" ForeColor="#990000" OnMenuItemClick="Menu1_MenuItemClick" StaticSubMenuIndent="10px" EnableViewState="False" Orientation="Horizontal">
+                    <DynamicHoverStyle BackColor="#990000" ForeColor="White" />
+                    <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                    <DynamicMenuStyle BackColor="#FFFBD6" />
+                    <DynamicSelectedStyle BackColor="#FFCC66" />
+                    <Items>
+                        <asp:MenuItem Text="Home" Value="Home" NavigateUrl="~/Login.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="About" Value="About" NavigateUrl="~/About.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Project" Value="Project"></asp:MenuItem>
+                        <asp:MenuItem Text="Reserve" Value="Reserve" NavigateUrl="~/Reserve.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Sign Up" Value="Sign Up" NavigateUrl="~/Registration.aspx"></asp:MenuItem>
+                    </Items>
+                    <StaticHoverStyle BackColor="#990000" ForeColor="White" />
+                    <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                    <StaticSelectedStyle BackColor="#FFCC66" />
+                </asp:Menu>
+            </asp:ContentPlaceHolder>
         </div>
     </div>
          <table style="font-family:Arial">
     <tr>
         <td colspan="2" style="width:800px; height:80px; background-color:#3399FF; 
             text-align:center">
-            <h1>
-                Welcome</h1>
+            <h1> Welcome</h1>
         </td>
     </tr>
     <tr>
